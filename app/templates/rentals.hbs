@@ -1,7 +1,11 @@
 <div class="container">
     <h1>Rentals</h1>
     <br> 
-    {{#each model as |r|}}
-        {{rental-list rental=r}}
-    {{/each}}
+    {{#list-filter
+        filter=(action 'filterByCity')
+        as |rentals|}}
+        {{#each rentals as |r|}}
+            {{rental-list rental=r}}
+        {{/each}}
+    {{/list-filter}}
 </div>
