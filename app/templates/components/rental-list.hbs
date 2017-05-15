@@ -1,0 +1,30 @@
+<div class="row">
+    <hr>
+    <div class="image-container">
+        <div class="{{if isWide " col-md-12 " "col-md-4 "}}">
+            <img src="{{rental.image}}" alt="" class="image {{if isWide " wide "}}">
+            <div class="overlay hidden-sm hidden-xs" {{action 'toggleImageSize'}}>
+                {{#if isWide}}
+                    {{fa-icon "fa-search-minus" }} View smaller                    
+                {{else}}
+                    {{fa-icon "fa-search-plus" }} View larger
+                {{/if}}
+            </div>
+        </div>
+        <div class="{{if isWide "corner-display" "col-md-8"}}">
+            <h3 style="margin-top: 10px;">{{rental.title}}</h3>
+            <div>
+                <b>Owner: </b> {{rental.owner}}
+            </div>
+            <div>
+                <b>Type: </b> {{rental-property-type rental.type}} - {{rental.type}}
+            </div>
+            <div>
+                <b>Location: </b> {{rental.city}}
+            </div>
+            <div>
+                <b>Number of bedrooms: </b> {{rental.bedrooms}}
+            </div>
+        </div>
+    </div>
+</div>

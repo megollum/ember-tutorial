@@ -1,2 +1,39 @@
 
 @import "ember-bootstrap/bootstrap";
+
+
+.image-container{
+    position: relative;  
+    .image{
+        width: 100%;
+    }
+
+    .overlay{
+        display: none;
+    }
+
+    .corner-display{
+        position: absolute;
+        top:0;
+        right: 15px;
+        padding: 20px;
+        color: white;
+        background-color: rgba(0,0,0, .7);
+        border-bottom-left-radius: 10px;  
+    }
+}
+
+.image-container:hover{
+    .overlay{
+        background-color: rgba(0,0,0, .7);    
+        position: absolute;
+        top:0;
+        left: 15px;
+        padding: 15px;
+        display:block;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        border-bottom-right-radius: 10px;
+    }
+}
