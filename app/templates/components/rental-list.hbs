@@ -1,6 +1,6 @@
 <div class="row">
     <hr>
-    <div class="image-container">
+    <div class="image-container clearfix">
         <div class="{{if isWide " col-md-12 " "col-md-4 "}}">
             <img src="{{rental.image}}" alt="" class="image {{if isWide " wide "}}">
             <div class="overlay hidden-sm hidden-xs" {{action 'toggleImageSize'}}>
@@ -26,5 +26,6 @@
                 <b>Number of bedrooms: </b> {{rental.bedrooms}}
             </div>
         </div>
+        <div class="{{if isWide "bottom-corner-display"}}">{{location-map location=rental.city}}</div>
     </div>
 </div>

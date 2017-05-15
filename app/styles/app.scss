@@ -4,6 +4,7 @@
 
 .image-container{
     position: relative;  
+    margin-bottom: 20px;
     .image{
         width: 100%;
     }
@@ -21,6 +22,13 @@
         background-color: rgba(0,0,0, .7);
         border-bottom-left-radius: 10px;  
     }
+
+    .bottom-corner-display{
+        position: absolute;
+        bottom:0;
+        right: 15px;
+        width: 135px;
+    }
 }
 
 .image-container:hover{
@@ -36,4 +44,8 @@
         color: white;
         border-bottom-right-radius: 10px;
     }
+}
+
+.map {
+    height: 100%;
 }
